@@ -13,7 +13,7 @@ export default {
       animation: {
         slideUp: 'slideUp 0.5s ease-in-out forwards',
         fadeOut: 'fadeOut 0.3s ease-out forwards',
-        slideUpContent: 'slideUpContent 0.8s ease-out forwards',
+        slideUpContent: 'slideUpContent var(--animation-duration, 0.8s) ease-out forwards',
         marquee: 'marquee 15s linear infinite',
       },
       keyframes: {

@@ -6,7 +6,7 @@ const MobileNavbar = () => {
   const location = useLocation();
 
   return (
-    <div className="flex justify-around items-center fixed gap-2 px-3 bottom-5 left-1/2 transform -translate-x-1/2 shadow py-2 z-50 rounded-full bg-white-900 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 md:hidden">
+    <div className="flex justify-around items-center fixed gap-2 px-3 bottom-5 left-1/2 transform -translate-x-1/2 shadow py-2 z-0 rounded-full bg-white-900 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 md:hidden">
       <Link 
         to="/" 
         className={`flex items-center gap-2 py-2 px-3 ${

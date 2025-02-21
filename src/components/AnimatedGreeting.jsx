@@ -34,7 +34,8 @@ const AnimatedGreeting = () => {
   }, []);
 
   const [isVisible, setIsVisible] = useState(() => {
-    return location.pathname === '/' && !localStorage.getItem('animationShown');
+    const allowedPaths = ['/', '/about', '/projects', '/contact'];
+    return allowedPaths.includes(location.pathname) && !localStorage.getItem('animationShown');
   });
   
   const greetings = ['Halo', 'Hello', '你好', 'こんにちは', '안녕하세요', 'Bonjour'];
@@ -42,7 +43,6 @@ const AnimatedGreeting = () => {
   useEffect(() => {
     if (!isVisible) return;
 
-    // Set flag when animation starts
     localStorage.setItem('animationShown', 'true');
 
     const greetingInterval = setInterval(() => {
@@ -71,14 +71,14 @@ const AnimatedGreeting = () => {
   return (
     <div className="fixed inset-0 z-50">
       <div
-        className={`absolute inset-0 bg-black ${
+        className={`absolute inset-0 bg-black z-20 ${
           shouldSlideUp ? 'animate-slideUp' : ''
         }`}
       />
       
       <div className="absolute inset-0 flex items-center justify-center">
         <div 
-          className={`text-6xl md:text-8xl font-bold text-white ${
+          className={`text-6xl md:text-8xl font-bold text-white z-30 ${
             !isTextVisible ? 'animate-fadeOut' : ''
           }`}
         >

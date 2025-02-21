@@ -5,12 +5,15 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import Home from './Pages/Home'
 import About from './Pages/About'
 import { Route, Routes } from 'react-router-dom'
+import AnimatedGreeting from './components/AnimatedGreeting';
 
 
 function App() {
 
   return (
+    
     <Router>
+    <AnimatedGreeting />
     <div className='min-h-screen relative bg-white dark:bg-gray-900 overflow-auto'>
       <Navbar />
       <Routes>
