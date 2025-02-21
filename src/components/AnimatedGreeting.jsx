@@ -6,15 +6,43 @@ const AnimatedGreeting = () => {
   const [shouldSlideUp, setShouldSlideUp] = useState(false);
   const [isTextVisible, setIsTextVisible] = useState(true);
   const location = useLocation();
+
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      localStorage.removeItem('animationShown');
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
+  }, []);
+
+  useEffect(() => {
+    const clearStorage = () => {
+      localStorage.removeItem('animationShown');
+    };
+
+    window.addEventListener('beforeunload', clearStorage);
+    window.addEventListener('unload', clearStorage);
+    
+    window.addEventListener('pagehide', clearStorage);
+
+    return () => {
+      window.removeEventListener('beforeunload', clearStorage);
+      window.removeEventListener('unload', clearStorage);
+      window.removeEventListener('pagehide', clearStorage);
+    };
+  }, []);
+
   const [isVisible, setIsVisible] = useState(() => {
     return location.pathname === '/' && !localStorage.getItem('animationShown');
   });
+  
   const greetings = ['Halo', 'Hello', '你好', 'こんにちは', '안녕하세요', 'Bonjour'];
 
   useEffect(() => {
     if (!isVisible) return;
 
-    // Mark animation as shown
+    // Set flag when animation starts
     localStorage.setItem('animationShown', 'true');
 
     const greetingInterval = setInterval(() => {
@@ -26,8 +54,6 @@ const AnimatedGreeting = () => {
               setShouldSlideUp(true);
               setTimeout(() => {
                 setIsVisible(false);
-                // Remove the flag when animation completes
-                localStorage.removeItem('animationShown');
               }, 500);
             }, 300);
           }, 300);
