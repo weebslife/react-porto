@@ -43,7 +43,7 @@ const AnimatedGreeting = () => {
   useEffect(() => {
     if (!isVisible) return;
 
-    localStorage.setItem('animationShown', 'true');
+    
 
     const greetingInterval = setInterval(() => {
       setCurrentGreeting((prev) => {
@@ -54,6 +54,7 @@ const AnimatedGreeting = () => {
               setShouldSlideUp(true);
               setTimeout(() => {
                 setIsVisible(false);
+                localStorage.setItem('animationShown', 'true');
               }, 500);
             }, 300);
           }, 300);
