@@ -28,13 +28,13 @@ const MobileNavbar = () => {
       </Link>
       
       <Link 
-        to="/projects" 
+        to="/project" 
         className={`flex items-center gap-2 py-2 px-3 ${
-          location.pathname === "/projects" ? "text-blue-700 bg-gray-200 rounded-full opacity-1" : "text-gray-900 dark:text-white"
+          location.pathname === "/project" ? "text-blue-700 bg-gray-200 rounded-full opacity-1" : "text-gray-900 dark:text-white"
         }`}
       >
         <Lightbulb />
-        {location.pathname === "/projects" && <span className="text-sm">Projects</span>}
+        {location.pathname === "/project" && <span className="text-sm">Projects</span>}
       </Link>
       
       <Link 

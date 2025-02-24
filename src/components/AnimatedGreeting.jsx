@@ -34,7 +34,7 @@ const AnimatedGreeting = () => {
   }, []);
 
   const [isVisible, setIsVisible] = useState(() => {
-    const allowedPaths = ['/', '/about', '/projects', '/contact'];
+    const allowedPaths = ['/', '/about', '/project', '/contact'];
     return allowedPaths.includes(location.pathname) && !localStorage.getItem('animationShown');
   });
   

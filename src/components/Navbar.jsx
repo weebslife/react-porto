@@ -37,7 +37,7 @@ const Navbar = () => {
   }
   return (
     <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 ">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
+      <div className="max-w-4xl flex flex-wrap items-center justify-between mx-auto py-4 max-lg:px-4">
         <a href="https://adinshobirin.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Asobi.</span>
         </a>
@@ -54,7 +54,7 @@ const Navbar = () => {
             )}
             <span className="sr-only">Toggle dark mode</span>
           </button>
-          <button type="button" className="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full duration-100 ease-in text-sm text-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-800 items-center flex gap-2 px-8 py-3 max-sm:py-2 max-sm:px-6 ">Contact <ArrowUpRight /> </button>
+          <Link to="/contact"  className="text-blue-700 hover:text-white dark:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4  font-medium rounded-full duration-100 ease-in text-sm text-center dark:border-blue-500 dark:hover:text-white dark:hover:bg-blue-800 focus:outline-none items-center flex gap-2 px-8 py-3 max-sm:py-2 max-sm:px-6 ">Contact <ArrowUpRight /> </Link>
         </div>
 
         <div className="items-center justify-between w-full max-md:hidden md:w-auto md:order-1 ml-28 " id="navbar-sticky">
@@ -62,22 +62,22 @@ const Navbar = () => {
             <li>
               <Link 
               to="/" 
-              className={`block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 ${
-              location.pathname === "/" ? "text-blue-700" : "text-gray-900"}`} aria-current="page">Home</Link>
+              className={`block py-2 px-3 rounded-sm md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 ${
+              location.pathname === "/" ? "dark:text-blue-400 text-blue-700" : "text-gray-900"}`} aria-current="page">Home</Link>
             </li>
             <li>
-              <Link to="/about" className={`block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 ${
-          location.pathname === "/about" ? "text-blue-700" : "text-gray-900"
+              <Link to="/about" className={`block py-2 px-3 rounded-sm md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 ${
+          location.pathname === "/about" ? "dark:text-blue-400 text-blue-700" : "text-gray-900"
         }`}>About Me</Link>
             </li>
             <li>
-              <Link to="/projects" className={`block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 ${
-          location.pathname === "/projects" ? "text-blue-700" : "text-gray-900"
+              <Link to="/project" className={`block py-2 px-3 rounded-sm md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 ${
+          location.pathname === "/project" ? "dark:text-blue-400 text-blue-700" : "text-gray-900"
         }`}>Project</Link>
             </li>
             <li>
-              <Link to="/contact" className={`block py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 ${
-          location.pathname === "/contact" ? "text-blue-700" : "text-gray-900"
+              <Link to="/contact" className={`block py-2 px-3 rounded-sm md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 ${
+          location.pathname === "/contact" ? "dark:text-blue-400 text-blue-700" : "text-gray-900"
         }`}>Contact</Link>
             </li>
           </ul>

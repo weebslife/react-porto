@@ -11,3 +11,51 @@
 * {
   font-family: "Inter", serif;
 }
+
+.sticky-image-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: calc(65% + 2rem);
+  height: 100vh;
+  pointer-events: none;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+}
+
+.sticky-image {
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-card {
+  min-height: 100vh;
+  display: flex;  
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.project-card .max-w-2xl {
+  width: 100%;
+  max-width: 50%;
+  margin-right: auto;
+  padding-right: 2rem;
+}
+
+@media (max-width: 768px) {
+  .sticky-image-container {
+    display: none;
+  }
+  
+  .project-card .max-w-2xl {
+    max-width: 100%;
+    padding-right: 0;
+  }
+}

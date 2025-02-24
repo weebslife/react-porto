@@ -15,7 +15,7 @@ const Skill = () => {
   ];
 
   return (
-    <div className="relative w-[300px] mx-auto md:w-full overflow-hidden py-1 mt-0">
+    <div className="relative w-[300px] mx-auto lg:w-full overflow-hidden py-1 mt-0">
       <div className="hover:pause-animation flex gap-4 animate-marquee">
         {skills.map((skill) => (
           <span 

@@ -17,14 +17,14 @@ const Home = () => {
 
   return (
     <>
-      <div className="min-h-screen flex flex-col items-center justify-center px-4 md:px-0 pt-24 bg-gradient-to-b from-white to-light-blue dark:from-gray-900 dark:to-gray-800 max-sm:pb-28">
-        <div className="max-w-2xl space-y-6 text-center">
+      <div className="min-h-screen flex flex-col items-center justify-center px-4 pt-24 bg-gradient-to-b from-white to-light-blue dark:from-gray-900 dark:to-gray-800 max-sm:pb-28">
+        <div className="max-w-4xl space-y-6 text-center max-lg:px-4">
           <div className={`space-y-2 opacity-0 ${showContent && 'animate-slideUpContent'}`} style={{ animationDelay: '0.2s' }}>
             <img src={profile} className="rounded-full w-[240px] mx-auto my-4" alt="" />
-            <h2 className="text-xl font-medium text-blue-600">
+            <h2 className="text-xl font-medium text-blue-600 dark:text-blue-400">
               Hello, I'm Adin Shobirin 👋
             </h2>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
+            <h1 className="text-4xl md:text-5xl max-sm:text-2xl font-bold text-gray-900 dark:text-white">
               Frontend Developer
             </h1>
           </div>
@@ -55,7 +55,7 @@ const Home = () => {
             </Link>
             <Link 
               to="/contact"
-              className={`flex items-center justify-center gap-2 px-8 py-3 border border-blue-600 text-blue-600 rounded-full hover:bg-blue-50 dark:hover:bg-blue-950 transition-colors opacity-0 ${showContent && 'animate-slideUpContent'}`}
+              className={`flex items-center justify-center gap-2 px-8 py-3 border dark:text-white border-blue-600 text-blue-600 rounded-full hover:bg-blue-50 dark:hover:bg-blue-600 dark:hover:text-white transition-colors opacity-0 ${showContent && 'animate-slideUpContent'}`}
                style={{ animationDelay: '1s' }}
             >
               Contact Me
