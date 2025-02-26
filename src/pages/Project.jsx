@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, act } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import ProjectButton from '../components/ProjectButton';
@@ -48,7 +48,8 @@ const Project = () => {
           <div className="sticky-image max-sm:hidden ">
             <img 
               src={sections[activeSection].image} 
-              alt="" 
+              alt={sections[activeSection].title}
+              title={sections[activeSection].title}
               className="h-80 w-auto rounded-2xl transition-opacity duration-300 object-cover shadow-md"
             />
           </div>

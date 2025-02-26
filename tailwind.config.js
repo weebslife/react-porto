@@ -14,7 +14,6 @@ export default {
         slideUp: 'slideUp 0.5s ease-in-out forwards',
         fadeOut: 'fadeOut 0.3s ease-out forwards',
         slideUpContent: 'slideUpContent 0.8s ease-out forwards',
-        marquee: 'marquee 15s linear infinite',
       },
       keyframes: {
         pulse: {
@@ -39,20 +38,10 @@ export default {
             opacity: 1 
           },
         },
-        marquee: {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-50%)' }
-        },
       },
     },
   },
   plugins: [
-    function({ addUtilities }) {
-      addUtilities({
-        '.pause-animation': {
-          'animation-play-state': 'paused',
-        }
-      })
-    }
+    
   ],
 }

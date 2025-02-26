@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import profile from '../assets/img/photo.png';
 import Skill from '../components/Skills';
 
+
+
 const Home = () => {
   const [showContent, setShowContent] = useState(false);
 

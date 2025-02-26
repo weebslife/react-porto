@@ -22,7 +22,7 @@
   z-index: 10;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   max-width: calc(100vw - 50%);
 }
 
@@ -64,6 +64,10 @@
   }
 }
 
-@media (max:width: 640px) {
- 
+.swiper-wrapper {
+  padding: 8px 0px;
+}
+
+.swiper-wrapper {
+  transition-timing-function: linear !important;
 }
