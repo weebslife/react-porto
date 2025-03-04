@@ -32,7 +32,7 @@ const About = () => {
 
               <p className={`text-dark dark:text-white mb-4 opacity-0 ${showContent && 'animate-slideUpContent'}`} style={{ animationDelay: '0.7s' }}>I’m a Web Developer with over <span className='font-bold'>3 years</span> of experience in <span className="font-bold">web</span> and <span className="font-bold">application</span> development. For more than 2 years, I’ve worked in teams to build efficient and scalable digital solutions.</p>
 
-              <p className={`text-dark mb-4 dark:text-white opacity-0 ${showContent && 'animate-slideUpContent'}`} style={{ animationDelay: '0.9s' }}>My expertise includes <span className="font-bold">React</span> for frontend, as well as <span className="font-bold">Laravel</span> and Node.js for backend development. I strive to deliver high-performance and maintainable solutions in every project.</p>
+              <p className={`text-dark mb-4 dark:text-white opacity-0 ${showContent && 'animate-slideUpContent'}`} style={{ animationDelay: '0.9s' }}>My expertise includes <span className="font-bold">React</span> for frontend, as well as <span className="font-bold">Laravel</span> and <span className="font-bold">Node</span> for backend development. I strive to deliver high-performance and maintainable solutions in every project.</p>
 
               <h4 className={`text-dark dark:text-white mb-4 text-2xl font-medium opacity-0 ${showContent && 'animate-slideUpContent'}`} style={{ animationDelay: '1s' }}>Let’s connect and collaborate! 🚀</h4>
 

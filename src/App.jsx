@@ -2,9 +2,11 @@ import './App.css';
 import Navbar from './components/Navbar';
 import MobileNavbar from './components/MobileNavbar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './Pages/Home';
+import Home from './pages/Home';
 import About from './pages/About';
 import Project from './pages/Project';
+import Contact from './pages/Contact';
+import TicTacToe from './pages/project/TicTacToe';
 import AnimatedGreeting from './components/AnimatedGreeting';
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/project" element={<Project />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/project/tic-tac-toe" element={<TicTacToe />} />
         </Routes>
         <MobileNavbar />
       </div>

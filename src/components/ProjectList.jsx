@@ -77,8 +77,7 @@ export const sections = [
     ],
     tech: [reactIcon, tailwindIcon],
     image: ticTacToe,
-    preview: "/project/tic-tac-toe",
+    preview: "/project/tic-tac-toe", 
     sourceCode: "https://github.com/weebslife/Tic-Tac-Toe-React",
   },
-  
 ];
