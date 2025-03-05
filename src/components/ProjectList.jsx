@@ -12,6 +12,8 @@ import htmlIcon from '../assets/icons/html.webp';
 import vueIcon from '../assets/icons/vue.png';
 import LaravelIcon from '../assets/icons/laravel.png';
 import bootStrapIcon from '../assets/icons/bootstrap.png';
+import wordpressIcon from '../assets/icons/wordpress.png';
+import diviIcon from '../assets/icons/divi.png';
 
 export const sections = [
   {
@@ -68,6 +70,17 @@ export const sections = [
     image: navbarImg,
     preview: "",
     sourceCode: "https://github.com/weebslife/responsive-navbar-pure-html-css-only",
+  },
+  {
+    title: "Portofolio",
+    subtitle: "",
+    content: [
+      "Personal portfolio website built using WordPress with the help of Divi Builder. It displays complete information about yourself, your skills, work experience, and showcases some of the projects you have worked on. This website is also equipped with responsive navigation, so that it appears optimally on desktop, tablet, and mobile.",
+    ],
+    tech: [wordpressIcon, diviIcon, htmlIcon, cssIcon],
+    image: portfolioImg,
+    preview: "/old-porto",
+    sourceCode: "",
   },
   {
     title: "Tic Tac Toe",

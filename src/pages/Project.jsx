@@ -42,7 +42,7 @@ const Project = () => {
   }, []);
 
   return (
-    <section className="min-h-screen max-lg:px-4 bg-gradient-to-b from-white to-light-blue dark:from-gray-900 dark:to-gray-800 max-sm:pb-16">
+    <section className="min-h-screen max-lg:px-4 bg-gradient-to-b from-white to-light-blue dark:from-gray-900 dark:to-gray-800 max-sm:pb-16 max-sm:mt-24">
       <div className="max-w-4xl mx-auto">
         <div className="sticky-image-container">
           <div className="sticky-image max-sm:hidden ">
@@ -95,7 +95,7 @@ const Project = () => {
                       ))}
                     </p>
 
-                    <div className="flex gap-4 pt-6  flex-wrap">
+                    <div className="flex gap-4 pt-6  flex-wrap mb-10">
                       <ProjectButton url={section.preview} type="preview" delay="0.8s" />
                       <ProjectButton url={section.sourceCode} type="source" delay="1s" />
                     </div>
