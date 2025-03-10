@@ -47,12 +47,12 @@ const About = () => {
         </div>
       </div>
       
-      <div className="min-h-screen max-lg:px-4 flex flex-col items-center justify-center pt-24 bg-gradient-to-b from-white to-light-blue dark:from-gray-900 dark:to-gray-800">
+      {/* <div className="min-h-screen max-lg:px-4 flex flex-col items-center justify-center pt-24 bg-gradient-to-b from-white to-light-blue dark:from-gray-900 dark:to-gray-800">
         <div className="max-w-4xl mx-auto">
           <h1 data-aos="fade-up" className={`text-3xl dark:text-white font-semibold opacity-0 mb-4 text-center `} style={{ animationDelay: '0.3s' }}>Experience </h1>
           <p className='text-3xl font-semibold mt-10 '>Coming Soon</p>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
