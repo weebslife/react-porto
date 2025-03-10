@@ -1,19 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, act } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import ProjectButton from '../components/ProjectButton';
 import { sections } from '../components/ProjectList';
-import Skeleton from 'react-loading-skeleton';
-import 'react-loading-skeleton/dist/skeleton.css';
+
 
 const Project = () => {
+
   useEffect(() => {
     AOS.init();
   }, []);
 
   const [showContent, setShowContent] = useState(false);
   const [activeSection, setActiveSection] = useState(0);
-  const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
     const hasAnimation = localStorage.getItem('animationShown');
@@ -34,7 +33,6 @@ const Project = () => {
 
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
           setActiveSection(index);
-          setImageLoaded(false); 
         }
       });
     };
@@ -47,20 +45,17 @@ const Project = () => {
     <section className="min-h-screen max-lg:px-4 bg-gradient-to-b from-white to-light-blue dark:from-gray-900 dark:to-gray-800 max-sm:pb-16 max-sm:mt-24">
       <div className="max-w-4xl mx-auto">
         <div className="sticky-image-container">
-          <div className="sticky-image max-sm:hidden">
-            {!imageLoaded && <Skeleton height={320} width={500} />}
+          <div className="sticky-image max-sm:hidden ">
             <img 
               src={sections[activeSection].image} 
               alt={sections[activeSection].title}
               title={sections[activeSection].title}
-              className={`h-80 w-auto rounded-2xl transition-opacity duration-300 object-cover shadow-md ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
-              onLoad={() => setImageLoaded(true)}
-              style={{ display: imageLoaded ? 'block' : 'none' }}
+              className="h-80 w-auto rounded-2xl transition-opacity duration-300 object-cover shadow-md"
             />
           </div>
         </div>
 
-        <div className="mx-auto">
+        <div className=" mx-auto">
           <div className=""> 
             {sections.map((section, index) => (
               <React.Fragment key={`section-${index}`}>
@@ -72,7 +67,7 @@ const Project = () => {
                     <h1 
                       className={`text-3xl dark:text-white font-semibold opacity-0 mb-4 ${showContent && 'animate-slideUpContent'}`} 
                       style={{ animationDelay: '0.3s' }}>
-                      {section.title} 
+                      {section.title}
                     </h1>
 
                     <h2 
@@ -100,7 +95,7 @@ const Project = () => {
                       ))}
                     </p>
 
-                    <div className="flex gap-4 pt-6 flex-wrap mb-10">
+                    <div className="flex gap-4 pt-6  flex-wrap mb-10">
                       <ProjectButton url={section.preview} type="preview" delay="0.8s" />
                       <ProjectButton url={section.sourceCode} type="source" delay="1s" />
                     </div>
