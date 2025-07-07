@@ -1,9 +1,11 @@
-name: Deploy React (Vite) App to Shared Hosting via FTP
+name: Deploy App
 
 on:
   push:
     branches:
       - main
+
+  workflow_dispatch: 
 
 jobs:
   build-and-deploy:
@@ -33,4 +35,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
-          server-dir: /public_html/adinshobirin
+          server-dir: /public_html/adinshobirin/
